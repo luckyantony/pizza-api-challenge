@@ -7,7 +7,7 @@ class Pizza(db.Model):
     name = db.Column(db.String)
     ingredients = db.Column(db.String)
 
-    restaurant_pizzas = db.relationship()
+    restaurant_pizzas = db.relationship('RestaurantPizza', backref='pizza')
 
     def to_dict(self):
         return {
