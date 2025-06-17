@@ -1,4 +1,4 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, make_response
 from server.app import db
 from server.models.restaurant_pizza import RestaurantPizza
 from server.models.pizza import Pizza
@@ -14,16 +14,16 @@ def create_restaurant_pizza():
     restaurant_id = data.get('restaurant_id')
 
     if not (1 <= price <= 30):
-        return jsonify({ "errors": ["Price must be between 1 and 30"] }), 400
+        return make_response({ "errors": ["Price must be between 1 and 30"] }, 400)
 
     pizza = Pizza.query.get(pizza_id)
     restaurant = Restaurant.query.get(restaurant_id)
 
     if not pizza or not restaurant:
-        return jsonify({ "error": "Pizza or Restaurant not found" }), 404
+        return make_response({ "error": "Pizza or Restaurant not found" }, 404)
 
     rp = RestaurantPizza(price=price, pizza_id=pizza_id, restaurant_id=restaurant_id)
     db.session.add(rp)
     db.session.commit()
 
-    return jsonify(rp.to_dict()), 201
+    return make_response(rp.to_dict(), 201)

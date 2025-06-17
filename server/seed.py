@@ -23,4 +23,4 @@ with app.app_context():
     db.session.add_all([rp1, rp2])
     db.session.commit()
 
-    print("🌱 Database seeded!")
+    print("Database seeded!")
