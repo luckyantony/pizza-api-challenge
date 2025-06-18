@@ -15,3 +15,4 @@ class Pizza(db.Model):
             "name": self.name,
             "ingredients": self.ingredients
         }
+

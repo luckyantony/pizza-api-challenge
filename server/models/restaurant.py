@@ -15,3 +15,4 @@ class Restaurant(db.Model):
             "name": self.name,
             "address": self.address
         }
+

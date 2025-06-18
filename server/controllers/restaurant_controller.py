@@ -27,3 +27,4 @@ def delete_restaurant(id):
     db.session.delete(restaurant)
     db.session.commit()
     return '', 204
+

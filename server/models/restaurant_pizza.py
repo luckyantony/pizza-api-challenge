@@ -17,3 +17,4 @@ class RestaurantPizza(db.Model):
             "pizza": self.pizza.to_dict(),
             "restaurant": self.restaurant.to_dict()
         }
+

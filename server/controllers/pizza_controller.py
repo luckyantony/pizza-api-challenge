@@ -7,3 +7,4 @@ pizza_bp = Blueprint('pizzas', __name__)
 def get_pizzas():
     pizzas = Pizza.query.all()
     return make_response([p.to_dict() for p in pizzas], 200)
+
