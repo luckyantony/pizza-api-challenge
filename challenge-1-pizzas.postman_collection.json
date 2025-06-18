@@ -1,0 +1,84 @@
+{
+  "info": {
+    "_postman_id": "c58d97a2-b6f3-42da-aabc-1b3d64d7f7c2",
+    "name": "Pizza Restaurant API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Restaurants",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/restaurants",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["restaurants"]
+        }
+      }
+    },
+    {
+      "name": "GET Restaurant by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/restaurants/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["restaurants", "1"]
+        }
+      }
+    },
+    {
+      "name": "DELETE Restaurant by ID",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://127.0.0.1:5000/restaurants/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["restaurants", "1"]
+        }
+      }
+    },
+    {
+      "name": "GET All Pizzas",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://127.0.0.1:5000/pizzas",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["pizzas"]
+        }
+      }
+    },
+    {
+      "name": "POST Create RestaurantPizza",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"price\": 10,\n  \"pizza_id\": 1,\n  \"restaurant_id\": 1\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/restaurant_pizzas",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["restaurant_pizzas"]
+        }
+      }
+    }
+  ]
+}
