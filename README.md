@@ -3,7 +3,7 @@
 A simple RESTful API for managing pizza restaurants built with Flask. No frontend — test using Postman.
 
 ## Project Structure
-
+```
 pizza-api-challenge/
 ├── server/
 │   ├── app.py
@@ -19,6 +19,7 @@ pizza-api-challenge/
 │       └── restaurant_pizza_controller.py
 ├── migrations/
 └── README.md
+```
 
 ## Setup Instructions
 
